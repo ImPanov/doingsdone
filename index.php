@@ -3,6 +3,9 @@ require_once("init.php");
 require_once("helpers.php");
 require_once("models.php");
 require_once("data.php");
+if(!$is_auth) {
+    header("Location: /guest.html");
+}
 $show_complete_tasks = filter_input(INPUT_GET, "show_complete_tasks", FILTER_VALIDATE_INT);
 $time_ready = filter_input(INPUT_GET, "tr");
 $task_id = filter_input(INPUT_GET, "task_id", FILTER_VALIDATE_INT);

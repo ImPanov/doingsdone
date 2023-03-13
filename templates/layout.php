@@ -31,7 +31,7 @@
                     </div>
                 </div>
             <?php else: ?>
-                <a class="main-header__side-item button button--transparent" href="sign-up.php">Регистрация/вход</a>
+                <a class="main-header__side-item button button--transparent" href="sign-in.php">Вход</a>
             <?php endif;?>
             </div>
         </header>

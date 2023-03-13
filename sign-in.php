@@ -4,6 +4,7 @@ require_once("helpers.php");
 require_once("init.php");
 require_once("models.php");
 require_once("validator.php");
+
 if (!$con) {
     $error = mysqli_connect_error();
 }

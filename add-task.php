@@ -4,6 +4,9 @@ require_once("init.php");
 require_once("helpers.php");
 require_once("validator.php");
 require_once("data.php");
+if(!$is_auth) {
+    header("Location: /guest.html");
+}
 $projects = get_projects($con,$user_id);
 $projects_id = array_column($projects,"id");
 $page_content = include_template("add-task.php", [
