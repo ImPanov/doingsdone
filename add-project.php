@@ -4,6 +4,9 @@ require_once("helpers.php");
 require_once("models.php");
 require_once("data.php");
 require_once("validator.php");
+if(!$is_auth) {
+    header("Location: /guest.html");
+}
 $page_content = include_template("add-project.php", [
 ]);
 if($_SERVER["REQUEST_METHOD"]=="POST") {
