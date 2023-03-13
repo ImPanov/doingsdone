@@ -23,7 +23,7 @@
             <div class="main-header__side">
                 
             <?php if($is_auth == true): ?>
-                <a class="main-header__side-item button button--plus open-modal" href="add-project.php">Добавить задачу</a>
+                <a class="main-header__side-item button button--plus open-modal" href="add-task.php">Добавить задачу</a>
                     <div class="main-header__side-item user-menu">
                         <div class="user-menu__data">
                             <p><?=$user_name?></p>
@@ -46,7 +46,7 @@
             <p>Веб-приложение для удобного ведения списка дел.</p>
         </div>
 
-        <a class="main-footer__button button button--plus" href="pages/form-task.html">Добавить задачу</a>
+        <a class="main-footer__button button button--plus" href="add-task.php">Добавить задачу</a>
 
         <div class="main-footer__social social">
             <span class="visually-hidden">Мы в соцсетях:</span>

@@ -7,6 +7,13 @@ function add_project($con,$project_name,$user_id) {
     $sql = "INSERT INTO projects(title,user_id) VALUES ('$project_name',$user_id)";
     return mysqli_query($con,$sql);
 }
+function add_task($con,$task,$user_id) {
+    $sql = "INSERT INTO tasks(title,project_id,deadline,file,user_id) VALUES (?,?,?,?,?)";
+    $task["user_id"] = $user_id;
+    $stmt = db_get_prepare_stmt($con, $sql, $task);
+    $res = mysqli_stmt_execute($stmt);   
+    return $res;
+}
 function get_projects($con,$user_id) {
     $sql = "SELECT projects.id, projects.title, projects.user_id, COUNT(tasks.id) AS project_count
     FROM projects

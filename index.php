@@ -40,7 +40,7 @@ if(!$con) {
                 break;
         }
     } else {
-        $tasks = get_tasks($con,$_SESSION["project_id"],$user_id);
+        $tasks = get_tasks($con,$_SESSION["project_id"]??null,$user_id);
     }
     if(isset($_GET["task_id"]) && isset($_GET["check"])) {
         $sql = get_update_status_query($con);
